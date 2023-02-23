@@ -1,0 +1,17 @@
+---
+title: "About this site"
+description: |
+  Some additional details about the website
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+### Education
+
+B.S. in Biology | Purdue University 2021
+
+Master in Environmental Science & Management | Bren School | University of California, Santa Barbara (2023)
+
+### Experience
