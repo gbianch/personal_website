@@ -1,0 +1,24 @@
+---
+title: "Top 10 sites for wind turbines in Santa Barbara County"
+description: |
+  A short description of the post.
+author:
+  - name: Grace Bianchi
+date: 2023-03-21
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(here)
+```
+
+
+```{r, fig.align='center', out.width='100%', out.height='200%', fig.pos='V', echo=FALSE}
+knitr::include_graphics(here("img/wind_sites.jpg"))
+```
+
+<br>

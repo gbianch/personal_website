@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>mfeo</title>
+    <link>gracebianchi.com</link>
+    <atom:link href="gracebianchi.com/blog.xml" rel="self" type="application/rss+xml"/>
+    <description>mfeo
+</description>
+    <generator>Distill</generator>
+    <lastBuildDate>Tue, 21 Mar 2023 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Top 10 sites for wind turbines in Santa Barbara County</title>
+      <dc:creator>Grace Bianchi</dc:creator>
+      <link>gracebianchi.com/posts/2023-03-21-wind_sites</link>
+      <description>A short description of the post.</description>
+      <guid>gracebianchi.com/posts/2023-03-21-wind_sites</guid>
+      <pubDate>Tue, 21 Mar 2023 00:00:00 +0000</pubDate>
+      <media:content url="gracebianchi.com/posts/2023-03-21-wind_sites/../../img/wind_sites.jpg" medium="image" type="image/jpeg"/>
+    </item>
+  </channel>
+</rss>

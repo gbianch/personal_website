@@ -1,0 +1,19 @@
+[
+  {
+    "path": "posts/2023-03-21-wind_sites/",
+    "title": "Top 10 sites for wind turbines in Santa Barbara County",
+    "description": "A short description of the post.",
+    "author": [
+      {
+        "name": "Grace Bianchi",
+        "url": {}
+      }
+    ],
+    "date": "2023-03-21",
+    "categories": [],
+    "contents": "\n\n\n\n\n\n\n\n",
+    "preview": "posts/2023-03-21-wind_sites/../../img/wind_sites.jpg",
+    "last_modified": "2023-03-22T15:54:41-07:00",
+    "input_file": "wind_map.knit.md"
+  }
+]
