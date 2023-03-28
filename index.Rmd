@@ -15,12 +15,12 @@ links:
 output:
   postcards::trestles
 site: distill::distill_website
+favicon: images/favicon.ico
 ---
  
 ### Bio
 
 I am graduating with my master in environmental science in June 2023. 
-
 
 Santa Barbara, CA
 

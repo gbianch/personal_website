@@ -10,7 +10,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ### Education
 
-Master in Environmental Science & Management | Bren School | University of California, Santa Barbara (2023)
+Master in Environmental Science & Management | The Bren School | University of California, Santa Barbara (2023)
 
 **Master's Project:** [Developing a Framework to idenitfy the best areas for rooftop solar on Multifamily Housing](https://bren.ucsb.edu/projects/identifying-key-development-regions-rooftop-solar-multifamily-housing-complexes-united) 
 Consulting experience identifying best areas for investment in solar PV on multifamily housing

@@ -1,5 +1,5 @@
 name: "."
-title: "mfeo"
+title: "Grace Bianchi"
 description: |
   mfeo
 output_dir: "docs"
@@ -16,6 +16,10 @@ navbar:
       href: https://github.com/gbianch
     - icon: fa fa-linkedin
       href: https://www.linkedin.com/in/grace-bianchi/
+      search: false
 output: distill::distill_article
+favicon: images/favicon.ico
+creative_commons: CC BY
 theme: postcards.css
+
 
