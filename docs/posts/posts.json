@@ -13,7 +13,7 @@
     "categories": [],
     "contents": "\nThis map was made in QGIS for a GIS course during my master’s degree at UCSB. In this assignment, I identified watersheds with the best overall conservation potential that preserve both riparian habitat and scenic viewsheds through conservation easement purchases on inexpensive and developable land.\n\n\n\nThe assumptions in this model are anywhere within 1000 ft of a stream with an observed Normalized Difference Vegetation Index between 0.2-0.5 is riparian habitat; viewsheds must be visible from at least one observation point; developable land must have a slope greater than 20%; and land cost is the parcel price per square meter (USD / m²). Land was analyzed at 1 hectare units. The scores of each criteria, riparian habitat, viewshed area, and developable land cost, were standardized and multiplied by criteria weight (0.50, 0.33, and 0.17, respectively) to produce parcel score. Three models were created, one for each criteria, and weighted sums were calculated in a “super model” that combined criteria requirements.\nTools used in this analysis include: buffer, clip rasters, raster calculator, reclassify by table, zonal statistics, create viewpoints, rasterize, and join attributes.\n\n\n\n",
     "preview": "posts/2023-03-28-conservationmap/../../images/conservation_map.jpg",
-    "last_modified": "2023-03-28T12:31:16-07:00",
+    "last_modified": "2023-03-28T15:24:25-07:00",
     "input_file": {}
   },
   {
@@ -30,7 +30,7 @@
     "categories": [],
     "contents": "\nThis map was created in QGIS for GIS course at UCSB. I analyzed the cumulative impact of nine scenarios of sea level rise from 0 meters to 4 meters in mean seal level rise. The analysis focused on the potential impacts of sea-level rise in the downtown area of Santa Barbara, in which I calculated the areas flooded (in ha), parcels count, and the flooded property losses (in millions USD).\n\n\n\n\n\n\n",
     "preview": "posts/2023-03-28-sealevelmap/../../images/sea_level_rise.jpg",
-    "last_modified": "2023-03-28T12:10:53-07:00",
+    "last_modified": "2023-03-28T15:24:25-07:00",
     "input_file": {}
   },
   {
@@ -47,7 +47,7 @@
     "categories": [],
     "contents": "\nThis was a map created for GIS course during my master’s degree, in which I used the Graphical Modeler tool to identify raster cells that meet all site requirements. Site specifications include:\nWind power: average annual wind speeds of greater than 6 m/s\nLand area: at least 6.25 contiguous hectares\nSites must be within 7.5 km of a major road\nSites cannot be within 7.5 km of an airport\nSites cannot be within 1 mile of an existing urban area\nSites cannot be within fire hazard zones\nSites cannot be on public land\n\n\n\n\n\n\n\n",
     "preview": "posts/2023-03-21-wind_sites/../../images/wind_sites.jpg",
-    "last_modified": "2023-03-28T12:08:21-07:00",
+    "last_modified": "2023-03-28T15:24:25-07:00",
     "input_file": {}
   }
 ]
