@@ -1,0 +1,30 @@
+---
+title: "Watershed conservation potential in Santa Barbara"
+description: |
+  Evaluated the conservation potential of lands based on viewshed, riparian habitat, and public access criteria.
+author:
+  - name: Grace Bianchi
+    url: {}
+date: 2023-03-28
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(here)
+```
+
+This map was made in QGIS for a GIS course during my master's degree at UCSB. In this assignment, I identified watersheds with the best overall conservation potential that preserve both riparian habitat and scenic viewsheds through conservation easement purchases on inexpensive and developable land. 
+
+
+
+```{r, fig.align='center',  out.width='100%', out.height='100%', fig.pos='H'}
+knitr::include_graphics(here("images/conservation_map.jpg"))
+```
+
+The assumptions in this model are anywhere within 1000 ft of a stream with an observed Normalized Difference Vegetation Index  between 0.2-0.5 is riparian habitat; viewsheds must be visible from at least one observation point; developable land must have a slope greater than 20%; and land cost is the parcel price per square meter (USD / m²). Land was analyzed at 1 hectare units. The scores of each criteria, riparian habitat, viewshed area, and developable land cost, were standardized and multiplied by criteria weight (0.50, 0.33, and 0.17, respectively) to produce parcel score. Three models were created, one for each criteria, and weighted sums were calculated in a "super model" that combined criteria requirements.
+
+Tools used in this analysis include: buffer, clip rasters, raster calculator, reclassify by table, zonal statistics, create viewpoints, rasterize, and join attributes.
