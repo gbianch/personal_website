@@ -5,6 +5,7 @@ description: |
 output_dir: "docs"
 base_url: gracebianchi.com
 navbar: 
+  search: false
   right:
     - text: "Home"
       href: index.html

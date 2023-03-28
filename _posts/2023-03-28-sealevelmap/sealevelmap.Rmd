@@ -20,7 +20,6 @@ library(here)
 This map was created in QGIS for GIS course at UCSB. I analyzed the cumulative impact of nine scenarios of sea level rise from 0 meters to 4 meters in mean seal level rise. The analysis focused on the potential impacts of sea-level rise in the downtown area of Santa Barbara, in which I calculated the areas flooded (in ha), parcels count, and the flooded property losses (in millions USD).
 
 
-
 ```{r, fig.align='center', out.width='100%', out.height='200%', fig.pos='V', echo=FALSE}
 knitr::include_graphics(here("images/sea_level_rise.jpg"))
 ```

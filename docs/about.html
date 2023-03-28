@@ -88,22 +88,24 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 
   <!--radix_placeholder_meta_tags-->
-  <title>mfeo: About</title>
+  <title>Grace Bianchi: About</title>
 
   <meta property="description" itemprop="description" content="Some additional details about the website"/>
 
+  <link rel="license" href="https://creativecommons.org/licenses/by/4.0/"/>
+  <link rel="icon" type="image/vnd.microsoft.icon" href="images/favicon.ico"/>
 
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="mfeo: About"/>
+  <meta property="og:title" content="Grace Bianchi: About"/>
   <meta property="og:type" content="article"/>
   <meta property="og:description" content="Some additional details about the website"/>
   <meta property="og:locale" content="en_US"/>
-  <meta property="og:site_name" content="mfeo"/>
+  <meta property="og:site_name" content="Grace Bianchi"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="mfeo: About"/>
+  <meta property="twitter:title" content="Grace Bianchi: About"/>
   <meta property="twitter:description" content="Some additional details about the website"/>
 
   <!--/radix_placeholder_meta_tags-->
@@ -458,268 +460,9 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
 
   <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-  <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet"/>
-  <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet"/>
+  <link href="site_libs/font-awesome-6.2.1/css/all.min.css" rel="stylesheet"/>
+  <link href="site_libs/font-awesome-6.2.1/css/v4-shims.min.css" rel="stylesheet"/>
   <script src="site_libs/headroom-0.9.4/headroom.min.js"></script>
-  <script src="site_libs/autocomplete-0.37.1/autocomplete.min.js"></script>
-  <script src="site_libs/fuse-6.4.1/fuse.min.js"></script>
-
-  <script type="application/javascript">
-
-  function getMeta(metaName) {
-    var metas = document.getElementsByTagName('meta');
-    for (let i = 0; i < metas.length; i++) {
-      if (metas[i].getAttribute('name') === metaName) {
-        return metas[i].getAttribute('content');
-      }
-    }
-    return '';
-  }
-
-  function offsetURL(url) {
-    var offset = getMeta('distill:offset');
-    return offset ? offset + '/' + url : url;
-  }
-
-  function createFuseIndex() {
-
-    // create fuse index
-    var options = {
-      keys: [
-        { name: 'title', weight: 20 },
-        { name: 'categories', weight: 15 },
-        { name: 'description', weight: 10 },
-        { name: 'contents', weight: 5 },
-      ],
-      ignoreLocation: true,
-      threshold: 0
-    };
-    var fuse = new window.Fuse([], options);
-
-    // fetch the main search.json
-    return fetch(offsetURL('search.json'))
-      .then(function(response) {
-        if (response.status == 200) {
-          return response.json().then(function(json) {
-            // index main articles
-            json.articles.forEach(function(article) {
-              fuse.add(article);
-            });
-            // download collections and index their articles
-            return Promise.all(json.collections.map(function(collection) {
-              return fetch(offsetURL(collection)).then(function(response) {
-                if (response.status === 200) {
-                  return response.json().then(function(articles) {
-                    articles.forEach(function(article) {
-                      fuse.add(article);
-                    });
-                  })
-                } else {
-                  return Promise.reject(
-                    new Error('Unexpected status from search index request: ' +
-                              response.status)
-                  );
-                }
-              });
-            })).then(function() {
-              return fuse;
-            });
-          });
-
-        } else {
-          return Promise.reject(
-            new Error('Unexpected status from search index request: ' +
-                        response.status)
-          );
-        }
-      });
-  }
-
-  window.document.addEventListener("DOMContentLoaded", function (event) {
-
-    // get search element (bail if we don't have one)
-    var searchEl = window.document.getElementById('distill-search');
-    if (!searchEl)
-      return;
-
-    createFuseIndex()
-      .then(function(fuse) {
-
-        // make search box visible
-        searchEl.classList.remove('hidden');
-
-        // initialize autocomplete
-        var options = {
-          autoselect: true,
-          hint: false,
-          minLength: 2,
-        };
-        window.autocomplete(searchEl, options, [{
-          source: function(query, callback) {
-            const searchOptions = {
-              isCaseSensitive: false,
-              shouldSort: true,
-              minMatchCharLength: 2,
-              limit: 10,
-            };
-            var results = fuse.search(query, searchOptions);
-            callback(results
-              .map(function(result) { return result.item; })
-            );
-          },
-          templates: {
-            suggestion: function(suggestion) {
-              var img = suggestion.preview && Object.keys(suggestion.preview).length > 0
-                ? `<img src="${offsetURL(suggestion.preview)}"</img>`
-                : '';
-              var html = `
-                <div class="search-item">
-                  <h3>${suggestion.title}</h3>
-                  <div class="search-item-description">
-                    ${suggestion.description || ''}
-                  </div>
-                  <div class="search-item-preview">
-                    ${img}
-                  </div>
-                </div>
-              `;
-              return html;
-            }
-          }
-        }]).on('autocomplete:selected', function(event, suggestion) {
-          window.location.href = offsetURL(suggestion.path);
-        });
-        // remove inline display style on autocompleter (we want to
-        // manage responsive display via css)
-        $('.algolia-autocomplete').css("display", "");
-      })
-      .catch(function(error) {
-        console.log(error);
-      });
-
-  });
-
-  </script>
-
-  <style type="text/css">
-
-  .nav-search {
-    font-size: x-small;
-  }
-
-  /* Algolioa Autocomplete */
-
-  .algolia-autocomplete {
-    display: inline-block;
-    margin-left: 10px;
-    vertical-align: sub;
-    background-color: white;
-    color: black;
-    padding: 6px;
-    padding-top: 8px;
-    padding-bottom: 0;
-    border-radius: 6px;
-    border: 1px #0F2E3D solid;
-    width: 180px;
-  }
-
-
-  @media screen and (max-width: 768px) {
-    .distill-site-nav .algolia-autocomplete {
-      display: none;
-      visibility: hidden;
-    }
-    .distill-site-nav.responsive .algolia-autocomplete {
-      display: inline-block;
-      visibility: visible;
-    }
-    .distill-site-nav.responsive .algolia-autocomplete .aa-dropdown-menu {
-      margin-left: 0;
-      width: 400px;
-      max-height: 400px;
-    }
-  }
-
-  .algolia-autocomplete .aa-input, .algolia-autocomplete .aa-hint {
-    width: 90%;
-    outline: none;
-    border: none;
-  }
-
-  .algolia-autocomplete .aa-hint {
-    color: #999;
-  }
-  .algolia-autocomplete .aa-dropdown-menu {
-    width: 550px;
-    max-height: 70vh;
-    overflow-x: visible;
-    overflow-y: scroll;
-    padding: 5px;
-    margin-top: 3px;
-    margin-left: -150px;
-    background-color: #fff;
-    border-radius: 5px;
-    border: 1px solid #999;
-    border-top: none;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion {
-    cursor: pointer;
-    padding: 5px 4px;
-    border-bottom: 1px solid #eee;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion:last-of-type {
-    border-bottom: none;
-    margin-bottom: 2px;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item {
-    overflow: hidden;
-    font-size: 0.8em;
-    line-height: 1.4em;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item h3 {
-    font-size: 1rem;
-    margin-block-start: 0;
-    margin-block-end: 5px;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-description {
-    display: inline-block;
-    overflow: hidden;
-    height: 2.8em;
-    width: 80%;
-    margin-right: 4%;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview {
-    display: inline-block;
-    width: 15%;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview img {
-    height: 3em;
-    width: auto;
-    display: none;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview img[src] {
-    display: initial;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion.aa-cursor {
-    background-color: #eee;
-  }
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion em {
-    font-weight: bold;
-    font-style: normal;
-  }
-
-  </style>
-
-
   <!--/radix_placeholder_navigation_in_header-->
   <!--radix_placeholder_distill-->
 
@@ -2231,9 +1974,9 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   /*-- Additional custom styles --*/
   /* Add any additional CSS rules below                      */
   .distill-site-nav {
-    background-color: #4158D0;
+    background-color: transparent;
     background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);color: rgba(255, 255, 255, 0.8);
-    b
+
   }
 
   </style>
@@ -2392,7 +2135,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     color: var(--hover-color, white);
   }</style>
   <!--/radix_placeholder_distill-->
-  <script src="site_libs/header-attrs-2.20/header-attrs.js"></script>
+  <script src="site_libs/header-attrs-2.21/header-attrs.js"></script>
   <script src="site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
   <link href="site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
@@ -2420,8 +2163,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <header class="header header--fixed" role="banner">
 <nav class="distill-site-nav distill-site-header">
 <div class="nav-left">
-<a href="index.html" class="title">mfeo</a>
-<input id="distill-search" class="nav-search hidden" type="text" placeholder="Search..."/>
+<a href="index.html" class="title">Grace Bianchi</a>
 </div>
 <div class="nav-right">
 <a href="index.html">Home</a>
@@ -2450,38 +2192,30 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 
 <div class="d-article">
-<h3 id="education">Education</h3>
-<p>Master in Environmental Science &amp; Management | Bren School | University of California, Santa Barbara (2023)</p>
+<p>Hi! Welcome to my site. I am a master’s student at UC Santa Barbara specializing in Energy &amp; Climate and Pollution Prevention Remediation. When I am not at school, I enjoy cooking, yoga, hiking, skiing, and spending time with friends.</p>
+<p>My interests include:</p>
+<ul>
+<li>Land-use impacts</li>
+<li>Renewable energy procurement</li>
+<li>Regenerative agriculture</li>
+<li>Corporate sustainability</li>
+<li>Data science</li>
+</ul>
+<h3 id="projects">Projects</h3>
 <p><strong>Master’s Project:</strong> <a href="https://bren.ucsb.edu/projects/identifying-key-development-regions-rooftop-solar-multifamily-housing-complexes-united">Developing a Framework to idenitfy the best areas for rooftop solar on Multifamily Housing</a>
 Consulting experience identifying best areas for investment in solar PV on multifamily housing</p>
-<p>Earth System Science
-Environmental Biogeochemistry</p>
-<p>Data Analysis
-Advanced Data Analysis
-Computing in Environmental Science
-GIS(QGIS)
-Cost-Benefit Analysis</p>
-<p>Energy Demand Analysis
-Energy, Technology, &amp; the Environment
-Electricity Markets</p>
-<p>Microbial Processes</p>
-<p>Ecological Principles
-Environmental Politics &amp; Policy
-Business and the Environment
-Environmental Law</p>
+<p>Master in Environmental Science &amp; Management | Bren School | University of California, Santa Barbara (2023)</p>
+<h3 id="ucsb-coursework">UCSB Coursework</h3>
+<p><strong>General:</strong> Earth System Science, Environmental Biogeochemistry, Ecological Principles, Environmental Law, Environmental Policy
+<br>
+<strong>Data science:</strong> Data Analysis and Statistics; Advanced Data Analysis; Computing in Environmental Science; Geographical Information Systems <br>
+<strong>Energy:</strong>Energy Demand Analysis; Energy, Technology, &amp; the Environment; Electricity Markets</p>
 <p>Bachelor of Science in Biology | Minor in Environmental and Ecological Engineering | Purdue University (2021)</p>
-<p>Study Abroad: Sydney Australia</p>
-<p><strong>Environmental Engineering</strong>
-Environmental Sustainability
-Industrial Ecology and LCA</p>
-<p><strong>Conservation</strong>
-Environmental &amp; Conservation Biology
-Soil Science
-Advanced Ecology
-Disease Ecology</p>
-<p>Statistical Methods in Biology
-Programmnig with MM Objects (Computer Science– Python)</p>
-<h3 id="experience">Experience</h3>
+<h3 id="purdue-coursework">Purdue Coursework</h3>
+<p><strong>Environmental Engineering:</strong> Environmental Sustainability; Industrial Ecology and LCA <br>
+<strong>Conservation:</strong> Environmental &amp; Conservation Biology, Soil Science, Advanced Ecology, Disease Ecology<br />
+<br>
+<strong>Computing:</strong> Statistical Methods in Biology, Programming with MM Objects (Computer Science Python)</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
@@ -2494,7 +2228,10 @@ Programmnig with MM Objects (Computer Science– Python)</p>
 <!--radix_placeholder_site_after_body-->
 <!--/radix_placeholder_site_after_body-->
 <!--radix_placeholder_appendices-->
-<div class="appendix-bottom"></div>
+<div class="appendix-bottom">
+<h3 id="reuse">Reuse</h3>
+<p>Text and figures are licensed under Creative Commons Attribution <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. The figures that have been reused from other sources don't fall under this license and can be recognized by a note in their caption: "Figure from ...".</p>
+</div>
 <!--/radix_placeholder_appendices-->
 <!--radix_placeholder_navigation_after_body-->
 <!--/radix_placeholder_navigation_after_body-->
