@@ -1,0 +1,26 @@
+name: "."
+title: "Grace Bianchi"
+description: |
+  mfeo
+output_dir: "docs"
+base_url: gracebianchi.com
+navbar: 
+  search: false
+  right:
+    - text: "Home"
+      href: index.html
+    - text: "About"
+      href: about.html
+    - text: "Data Visualization"     
+      href: blog.html 
+    - icon: fa fa-github
+      href: https://github.com/gbianch
+    - icon: fa fa-linkedin
+      href: https://www.linkedin.com/in/grace-bianchi/
+      search: false
+output: distill::distill_article
+favicon: images/favicon.ico
+creative_commons: CC BY
+theme: postcards.css
+
+

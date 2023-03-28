@@ -1,0 +1,31 @@
+---
+title: "Grace Bianchi"
+image: "grace.jpeg"
+color1: "#5A59A3" 
+color2: "#C66060"
+angle: 130
+theme: postcards.css
+links:
+  - label: LinkedIn
+    url: "https://www.linkedin.com/in/grace-bianchi/"
+  - label: GitHub
+    url: "https://github.com/gbianch"
+  - label: Email
+    url: "mailto:bianchigrace04@gmail.com"
+output:
+  postcards::jolla
+site: distill::distill_website
+favicon: images/favicon.ico
+---
+ 
+
+Santa Barbara, CA
+
+
+
+
+
+
+
+
+

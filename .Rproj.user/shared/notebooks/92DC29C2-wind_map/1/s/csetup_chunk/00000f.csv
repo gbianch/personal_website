@@ -1,0 +1,4 @@
+"0","knitr::opts_chunk$set(echo = FALSE)"
+"0","library(here)"
+"2","here() starts at /Users/gracebianchi/Desktop/UCSB/ESM_244/personal_website
+"

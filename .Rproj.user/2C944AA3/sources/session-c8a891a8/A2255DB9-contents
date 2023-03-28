@@ -1,0 +1,34 @@
+---
+title: "Site suitability analysis for wind power subsidies"
+description: |
+  A map created in QGIS identifying sites for wind turbines given site requirements.
+author:
+  - name: Grace Bianchi
+date: 2023-03-21
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(here)
+```
+
+This was a map created for GIS course during my master's degree, in which I used the Graphical Modeler tool to identify raster cells that meet all site requirements. Site specifications include:
+
+- Wind power: average annual wind speeds of greater than 6 m/s
+- Land area: at least 6.25 contiguous hectares
+- Sites must be within 7.5 km of a major road
+- Sites cannot be within 7.5 km of an airport
+- Sites cannot be within 1 mile of an existing urban area
+- Sites cannot be within fire hazard zones
+- Sites cannot be on public land
+
+
+```{r, fig.align='center', out.width='100%', out.height='200%', fig.pos='V', echo=FALSE}
+knitr::include_graphics(here("images/wind_sites.jpg"))
+```
+
+<br>
