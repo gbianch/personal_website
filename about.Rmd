@@ -1,20 +1,14 @@
 ---
 title: "About"
 description: |
-  Hi! Welcome to my site. I am a master's student at UC Santa Barbara specializing in Energy & Climate and Pollution Prevention Remediation. When I am not at school, I enjoy cooking, yoga, hiking, skiing, and spending time with friends. 
+  Hi! Welcome to my site.
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-My interests include:
-
-- Land-use impacts
-- Renewable energy procurement
-- Regenerative agriculture
-- Corporate sustainability
-- Data science 
+I am a master's student at UC Santa Barbara specializing in Energy & Climate and Pollution Prevention Remediation. My interests include land-use impacts, renewable energy development, corporate sustainability, and regenerative agriculture.  When I am not at school, I enjoy cooking, yoga, hiking, skiing, and spending time with friends. 
 
 ## Education
 
@@ -27,15 +21,14 @@ My interests include:
 <br>
 **Data science:** Data Analysis and Statistics; Advanced Data Analysis; Computing in Environmental Science; Geographical Information Systems <br>
 **Energy:**Energy Demand Analysis; Energy, Technology, & the Environment; Electricity Markets
+<br>
+<br>
 
 **Bachelor of Science in Biology** | Minor in Environmental and Ecological Engineering | Purdue University (2021)
-<br>
-<br>
 
-### Purdue Coursework
+### Coursework
 **Environmental Engineering:** Environmental Sustainability; Industrial Ecology and LCA <br>
-**Conservation:** Environmental & Conservation Biology, Soil Science, Advanced Ecology, Disease Ecology  
-<br>
+**Conservation:** Environmental & Conservation Biology, Soil Science, Advanced Ecology, Disease Ecology  <br>
 **Computing:** Statistical Methods in Biology, Programming with MM Objects (Computer Science Python)
 
 
