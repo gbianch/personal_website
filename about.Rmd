@@ -1,34 +1,87 @@
 ---
-title: "About"
+title: "Background"
 description: |
-  Hi! Welcome to my site.
+editor_options: 
+  markdown: 
+    wrap: 72
+output:
+  distill::distill_article:
+    toc: true
+    toc_depth: 3
+
 ---
+<style>
+    #header3 {
+        color: #4158D0;
+    }
+</style>
+
+
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
+library(here)
 ```
 
-I am a master's student at UC Santa Barbara specializing in Energy & Climate and Pollution Prevention Remediation. My interests include land-use impacts, renewable energy development, corporate sustainability, and regenerative agriculture.  When I am not at school, I enjoy cooking, yoga, hiking, skiing, and spending time with friends. 
+Hi! Welcome to my site.
 
-## Education
+I am a master's student at UC Santa Barbara specializing in Energy &
+Climate and Pollution Prevention & Remediation. My interests include
+land-use impacts, renewable energy development, corporate
+sustainability, and regenerative agriculture. When I am not at school, I
+enjoy cooking, yoga, hiking, skiing, and spending time with friends.
 
-**Master in Environmental Science & Management** | Bren School | University of California, Santa Barbara (2023) 
+### Education {#header3}
 
-**Master's Project:** [Developing a Framework to idenitfy the best areas for rooftop solar on Multifamily Housing](https://bren.ucsb.edu/projects/identifying-key-development-regions-rooftop-solar-multifamily-housing-complexes-united)
+**Master in Environmental Science & Management** \| Bren School \|
+University of California, Santa Barbara (2023)
 
-### Coursework
-**General:** Earth System Science, Environmental Biogeochemistry, Ecological Principles, Environmental Law, Environmental Policy
+**Master's Project:** [Developing a Framework to idenitfy the best areas
+for rooftop solar on Multifamily
+Housing](https://bren.ucsb.edu/projects/identifying-key-development-regions-rooftop-solar-multifamily-housing-complexes-united)
+
+**Bachelor of Science in Biology** \| Minor in Environmental and
+Ecological Engineering \| Purdue University (2021)
+
+
 <br>
-**Data science:** Data Analysis and Statistics; Advanced Data Analysis; Computing in Environmental Science; Geographical Information Systems <br>
-**Energy:**Energy Demand Analysis; Energy, Technology, & the Environment; Electricity Markets
+**Relevant Coursework** <br>
+
+-   [Environmental Management]{.underline}**:** Earth System Science;
+    Environmental Biogeochemistry; Ecological Principles, Environmental
+    Law; Environmental Policy; Business and the Environment;
+    Cost-Benefit Analysis <br>
+
+-   [Data science/Computing:]{.underline} Data Analysis and Statistics;
+    Advanced Data Analysis; Computing in Environmental Science;
+    Geographical Information Systems (QGIS); Statistical Methods in
+    Biology (in R), Programming with MM Objects (Computer Science in
+    Python) <br>
+
+-   [Energy & Climate]{.underline}**:** Energy Demand Analysis; Energy,
+    Technology, & the Environment; Electricity Markets <br>
+
+-   [Environmental Engineering]{.underline}**:** Environmental
+    Sustainability; Industrial Ecology and LCA; Intro to Civil
+    Engineering <br>
+
+-   [Conservation]{.underline}**:** Environmental & Conservation
+    Biology, Soil Science, Advanced Ecology, Disease Ecology\
+    
 <br>
-<br>
 
-**Bachelor of Science in Biology** | Minor in Environmental and Ecological Engineering | Purdue University (2021)
+### Experience 
 
-### Coursework
-**Environmental Engineering:** Environmental Sustainability; Industrial Ecology and LCA <br>
-**Conservation:** Environmental & Conservation Biology, Soil Science, Advanced Ecology, Disease Ecology  <br>
-**Computing:** Statistical Methods in Biology, Programming with MM Objects (Computer Science Python)
+```{r, fig.align='center', out.width='100%', out.height='200%', fig.pos='V', echo=FALSE}
+knitr::include_graphics(here("images/sb_overlook.jpeg"))
+```
 
 
+```{r, fig.align='center', out.width='100%', out.height='100%', fig.pos='H', echo=FALSE}
+knitr::include_graphics(here("images/painted_turtle.jpeg"))
+```
+
+
+```{r, fig.align='center', out.width='100%', out.height='100%', fig.pos='H', echo=FALSE}
+knitr::include_graphics(here("images/usyd.jpeg"))
+```
