@@ -1,87 +1,125 @@
 ---
 title: "Background"
 description: |
-editor_options: 
-  markdown: 
-    wrap: 72
 output:
   distill::distill_article:
     toc: true
     toc_depth: 3
-
 ---
+
+```{=html}
 <style>
-    #header3 {
+    #header2 {
         color: #4158D0;
     }
 </style>
 
-
-
+<style>
+    #header3 {
+        color: #C850C0;
+    }
+</style>
+```
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 library(here)
 ```
 
-Hi! Welcome to my site.
-
-I am a master's student at UC Santa Barbara specializing in Energy &
-Climate and Pollution Prevention & Remediation. My interests include
-land-use impacts, renewable energy development, corporate
-sustainability, and regenerative agriculture. When I am not at school, I
-enjoy cooking, yoga, hiking, skiing, and spending time with friends.
-
-### Education {#header3}
-
-**Master in Environmental Science & Management** \| Bren School \|
-University of California, Santa Barbara (2023)
-
-**Master's Project:** [Developing a Framework to idenitfy the best areas
-for rooftop solar on Multifamily
-Housing](https://bren.ucsb.edu/projects/identifying-key-development-regions-rooftop-solar-multifamily-housing-complexes-united)
-
-**Bachelor of Science in Biology** \| Minor in Environmental and
-Ecological Engineering \| Purdue University (2021)
-
-
-<br>
-**Relevant Coursework** <br>
-
--   [Environmental Management]{.underline}**:** Earth System Science;
-    Environmental Biogeochemistry; Ecological Principles, Environmental
-    Law; Environmental Policy; Business and the Environment;
-    Cost-Benefit Analysis <br>
-
--   [Data science/Computing:]{.underline} Data Analysis and Statistics;
-    Advanced Data Analysis; Computing in Environmental Science;
-    Geographical Information Systems (QGIS); Statistical Methods in
-    Biology (in R), Programming with MM Objects (Computer Science in
-    Python) <br>
-
--   [Energy & Climate]{.underline}**:** Energy Demand Analysis; Energy,
-    Technology, & the Environment; Electricity Markets <br>
-
--   [Environmental Engineering]{.underline}**:** Environmental
-    Sustainability; Industrial Ecology and LCA; Intro to Civil
-    Engineering <br>
-
--   [Conservation]{.underline}**:** Environmental & Conservation
-    Biology, Soil Science, Advanced Ecology, Disease Ecology\
-    
-<br>
-
-### Experience 
-
-```{r, fig.align='center', out.width='100%', out.height='200%', fig.pos='V', echo=FALSE}
-knitr::include_graphics(here("images/sb_overlook.jpeg"))
+::: float-image
+```{r, fig.align='center', out.width='50%', out.height='50%', out.extra='style="float:right; padding:5px"', echo=FALSE}
+knitr::include_graphics(here("images/skiing.jpeg"))
 ```
 
+Hi, welcome to my personal website and porfolio!
 
-```{r, fig.align='center', out.width='100%', out.height='100%', fig.pos='H', echo=FALSE}
-knitr::include_graphics(here("images/painted_turtle.jpeg"))
+I am a master's student at UC Santa Barbara specializing in Energy & Climate and Pollution Prevention & Remediation, expected to graduate in June 2023. My interests include renewable energy development, land-use impacts, corporate sustainability, and regenerative agriculture. 
+
+When I am not at school, I enjoy cooking, yoga, hiking, skiing, and spending time with friends. My hobbies include reading, crocheting, and newly, stained-glass projects.
+
+:::
+
+## Education {#header2}
+
+**Master in Environmental Science & Management** \| Bren School \| University of California, Santa Barbara (2023)
+
+**Master's Project:** [Developing a Framework to idenitfy the best areas for rooftop solar on Multifamily Housing](https://bren.ucsb.edu/projects/identifying-key-development-regions-rooftop-solar-multifamily-housing-complexes-united)
+
+**Bachelor of Science in Biology** \| Purdue University (2021) <br> Minor in Environmental and Ecological Engineering
+
+### Relevant Coursework {#header3}
+
+-   [Environmental Management]{.underline}**:** Earth System Science; Environmental Biogeochemistry; Ecological Principles, Environmental Law; Environmental Policy; Business and the Environment; Cost-Benefit Analysis
+
+-   [Data Science/Computing:]{.underline} Data Analysis and Statistics; Advanced Data Analysis; Computing in Environmental Science; Geographical Information Systems (QGIS); Statistical Methods in Biology (in R), Programming with MM Objects (Computer Science in Python)
+
+-   [Energy & Climate]{.underline}**:** Energy Demand Analysis; Energy, Technology, & the Environment; Electricity Markets
+
+-   [Environmental Engineering]{.underline}**:** Environmental Sustainability; Industrial Ecology and LCA; Intro to Civil Engineering
+
+-   [Conservation]{.underline}**:** Environmental & Conservation Biology, Soil Science, Advanced Ecology, Disease Ecology\
+
+## Experience {#header2}
+
+### Data, Renewable Energy, and Consulting {#header3}
+
+**Data Manager**-- Nationwide Zero Net Energy Apartments Master's Group Project (4/22--Present) <br> Client: ZNE Capital \| UCSB Bren School, Santa Barbara, CA
+
+-   Developed multi-criteria reproducible model using RStudio to calculate weighted scores and identify the best investment areas in the U.S. for rooftop solar PV on multifamily housing
+
+-   Created ArcGIS maps of 7 criterion including energy production, climate risk, CO2 abatement potential, net metering policies, and solar project financials to show relative ranking of areas
+
+-   Analyzed demographic, real estate, and rental policy data for all U.S. metropolitan areas and reported 44 favorable areas to further analyze
+
+-   Co-wrote 50-page technical report of methods and findings to support stakeholder decisions
+
+**Excel Graduate Assistant** (9/22--10/22) <br> UCSB Bren School, Santa Barbara, CA
+
+-   Supported PhD student in Beginner & Intermediate Excel Workshops for graduate students
+-   Guided students' understanding and application of absolute vs. relative cell references, formulas, formatting, naming, logic, indexing, pivot tables, statistical analyses and regression
+
+
+**Federal Funding Programs Contractor** (5/22--12/22) <br> Virga Labs, Tucson, AZ (Remote) <br>
+
+-   Interpreted the Infrastructure and Jobs Act, Inflation Reduction Act, and Farm Bill in collaboration with 4-person team to inform resilience funding opportunities in the Colorado River Basin
+
+-   Updated 144 funding programs entries in Ten Strategies for Climate Resilience database; information, and resources by researching agency websites
+
+-   Collaborated with 5 staff members at Theodore Roosevelt Conservation Partnership and other affiliate organizations to provide centralized funding resources for local governments and NGOs
+
+### Research and Fieldwork{#header3}
+
+**Anthropogenic Stressors Researcher** (8/20--7/21) <br> Dr. Jason Hoverman's Ecotoxicology Laboratory -- Purdue University, West Lafayette, IN 
+
+-   Compiled and analyzed metamorphic data of 1000 tadpoles using Excel pivot tables to determine the impacts of AFFFs on aquatic species to inform toxicity in a SERDP-funded project
+
+-   Researched ecosystem responses to pesticide contamination and peer-reviewed ecotoxicology manuscripts to improve quality and findings
+
+-   Conducted field work (e.g., collected water and biological samples) to assess effects of PFAs exposure on amphibian reproduction, growth, and development <br>
+
+```{r, fig.align='center', out.width='50%', out.height='50%', out.extra='style="float:center"', echo=FALSE}
+knitr::include_graphics(here("images/fieldwork.JPG"))
 ```
 
+Checking traps for turtles to understand ecosystem populations and collect biological samples for contaminent levels
 
-```{r, fig.align='center', out.width='100%', out.height='100%', fig.pos='H', echo=FALSE}
+**Invertebrate Research Intern** (5/19-7/19) <br> Dr. Tanya Latty's Laboratory -- University of Sydney
+
+-   Collaborated with PhD students in weekly meetings to understand insect ecology and behaviour in urban and rural environments
+
+-   Tracked movement of 20 snails using 24 hour monitored experiments to assess decision- making traits between agar mixtures
+
+-   Identified insect biodiversity using online taxonomic tools to determine insect distribution
+
+-   Created inventory of laboratory equipment to enhance material ordering process and lab organization
+
+-   Reviewed scientific literature and curated summaries using Endnote to gather information on velvet worms
+
+
+```{r, fig.align='center', out.width='50%', out.height='50%', fig.pos='H', echo=FALSE}
 knitr::include_graphics(here("images/usyd.jpeg"))
 ```
+
+
+### Volunteer
+
+Santa Barbara Wildlife Care Network -- Goleta, CA (9/21) <br> Santa Ynez Valley Therapeutic Horse Ranch (8/22)
