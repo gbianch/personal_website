@@ -96,7 +96,7 @@ When I am not at school, I enjoy cooking, yoga, hiking, skiing, and spending tim
 
 -   Conducted field work (e.g., collected water and biological samples) to assess effects of PFAs exposure on amphibian reproduction, growth, and development <br>
 
-```{r, fig.align='center', out.width='50%', out.height='50%', out.extra='style="float:center"', echo=FALSE}
+```{r, fig.align='center', out.width='50%', out.height='50%', echo=FALSE}
 knitr::include_graphics(here("images/fieldwork.JPG"))
 ```
 
@@ -120,6 +120,6 @@ knitr::include_graphics(here("images/usyd.jpeg"))
 ```
 
 
-### Volunteer
+### Volunteer Work {#header3}
 
 Santa Barbara Wildlife Care Network -- Goleta, CA (9/21) <br> Santa Ynez Valley Therapeutic Horse Ranch (8/22)
