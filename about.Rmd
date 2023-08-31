@@ -30,11 +30,11 @@ library(here)
 knitr::include_graphics(here("images/skiing.jpeg"))
 ```
 
-Hi, welcome to my personal website and porfolio!
+Hi, welcome to my personal website and portfolio!
 
-I am a master's student at UC Santa Barbara specializing in Energy & Climate and Pollution Prevention & Remediation, expected to graduate in June 2023. My interests include renewable energy development, land-use impacts, corporate sustainability, and regenerative agriculture. 
+I recently recieved my master in environmental science and management from   UC Santa Barbara with a specialization in Energy & Climate. My master's project, which involved assessing the feasibility of solar projects for multifamily housing in the United States, demonstrated my proficiency in data analysis and visualization. By developing an interactive model in R, she identified optimal regions to invest in multifamily housing and accelerate solar adoption, given stakeholder preferences.
 
-When I am not at school, I enjoy cooking, yoga, hiking, skiing, and spending time with friends. My hobbies include reading, crocheting, and newly, stained-glass projects.
+With my interdisciplinary understanding of environmental issues and multi-sector perspective to identify solutions, I am actively seeking positions that leverage my expertise in data analysis and visualization to develop innovative climate solutions. My interests include renewable energy development, land-use impacts, corporate sustainability, and regenerative agriculture. In my free time, I enjoy cooking, reading, and spending time outdoors. 
 
 :::
 
@@ -43,6 +43,7 @@ When I am not at school, I enjoy cooking, yoga, hiking, skiing, and spending tim
 **Master in Environmental Science & Management** \| Bren School \| University of California, Santa Barbara (2023)
 
 **Master's Project:** [Developing a Framework to idenitfy the best areas for rooftop solar on Multifamily Housing](https://bren.ucsb.edu/projects/identifying-key-development-regions-rooftop-solar-multifamily-housing-complexes-united)
+[Model to Identify Favorable Areas to invest in Multifamily Housing convert into Net Zero Energy Properties ](https://gbianch.shinyapps.io/solar_fam_model/)
 
 **Bachelor of Science in Biology** \| Purdue University (2021) <br> Minor in Environmental and Ecological Engineering
 
@@ -50,13 +51,13 @@ When I am not at school, I enjoy cooking, yoga, hiking, skiing, and spending tim
 
 -   [Environmental Management]{.underline}**:** Earth System Science; Environmental Biogeochemistry; Ecological Principles, Environmental Law; Environmental Policy; Business and the Environment; Cost-Benefit Analysis
 
--   [Data Science/Computing:]{.underline} Data Analysis and Statistics; Advanced Data Analysis; Computing in Environmental Science; Geographical Information Systems (QGIS); Statistical Methods in Biology (in R), Programming with MM Objects (Computer Science in Python)
+-   [Data Science/Computing:]{.underline} Data Analysis and Statistics; Advanced Data Analysis; Computing in Environmental Science; Geographical Information Systems (QGIS); Environemntal Modeling; Statistical Methods in Biology (in R), Programming with MM Objects (Computer Science in Python)
 
--   [Energy & Climate]{.underline}**:** Energy Demand Analysis; Energy, Technology, & the Environment; Electricity Markets
+-   [Energy & Climate]{.underline}**:** Energy Demand Analysis; Energy, Technology, & the Environment; Electricity Markets; Pollution Precention
 
 -   [Environmental Engineering]{.underline}**:** Environmental Sustainability; Industrial Ecology and LCA; Intro to Civil Engineering
 
--   [Conservation]{.underline}**:** Environmental & Conservation Biology, Soil Science, Advanced Ecology, Disease Ecology\
+-   [Conservation]{.underline}**:** Fate & Transport of Pollutants, Environmental & Conservation Biology, Soil Science, Advanced Ecology, Disease Ecology\
 
 ## Experience {#header2}
 
